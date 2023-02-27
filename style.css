@@ -1,0 +1,74 @@
+html, body, section {
+  height: 100%;
+  background: linear-gradient(to right, rgb(0, 109, 143), rgb(255, 196, 171));;
+}
+
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+article {
+	margin-right: 7em;
+  	font-family: 'Orbitron', sans-serif;
+  	text-align: right;
+}
+
+h1 {
+	 font-size: 2em;
+}
+
+input {
+	font-size: .85rem;
+}
+
+#enter{
+	font-size: 1rem;
+	margin-left: 15px;
+	margin-top: 1em;
+}
+
+#reset {
+	font-size: 1rem;
+	margin-top: 1em;
+	margin-right: 2.2em;
+}
+
+ul {
+	font-size: 1.2rem;
+	list-style: none;
+	padding: 1em;
+}
+
+ul button {
+	margin-left: 25px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 100%;
+}
+
+/* Pattern styles */
+.container {
+  display: flex;
+}
+
+.left-half {
+/*  background-image: url("https://images.squarespace-cdn.com/content/v1/5ae9b011a9e0289ba81616a1/1566431384558-1UH6SYG3K6TKYWCNFLNA/michaelchernow_quote.jpg?format=1000w");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;*/
+  flex: 1;
+  padding: 1rem;
+}
+
+.right-half {
+  flex: 1;
+  padding: 1rem;
+}
