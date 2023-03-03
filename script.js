@@ -1,31 +1,29 @@
-var button = document.getElementById("enter");
-var input = document.getElementById("userinput");
-var ul = document.querySelector("ul");
+let button = document.getElementById("enter");
+let input = document.getElementById("userinput");
+let ul = document.querySelector("ul");
 let reset = document.getElementById('reset')
 
 // clears text for input
-function clearText(){
-	input.value = '';
-}
+const clearText= () => input.value = '';
 
-function inputLength() {
-	return input.value.length;
-}
+
+
+const inputLength = () => input.value.length;
 
 // new list items
-function createListElement() {
-		var li = document.createElement("li");
+const createListElement = () => {
+		let li = document.createElement("li");
 		li.appendChild(document.createTextNode(input.value));
 	// creates butttons
-		var btn = document.createElement("button");
-		btn.innerHTML = "Complete!";
+		let btn = document.createElement("button");
+		btn.innerHTML = "DONE";
 		li.appendChild(btn);
 	// remove element
-		btn.addEventListener("click", function() {
+		btn.addEventListener("click", () => {
 			li.parentNode.removeChild(li);
 		})
 	// toggle done class
-		li.addEventListener("click", function() {
+		li.addEventListener("click", () => {
 			li.classList.toggle("done");
 		})
 	// continued	
@@ -34,13 +32,13 @@ function createListElement() {
 
 }
 
-function addListAfterClick() {
+const addListAfterClick = () => {
 		if (inputLength() > 0) {
 		createListElement();
 	}
 }
 
-function addListAfterKeypress(event) {
+const addListAfterKeypress = (event) => {
 		if (inputLength() > 0 && event.keyCode === 13) {
 		createListElement();
 	}
